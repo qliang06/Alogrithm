@@ -12,7 +12,7 @@ Output:6
 
 Solution：
 
-Cantor expansion
+**Cantor expansion
 
 Given a full permutation, calculate its lexicographic order. For the sake of clarity, we have an example [2, 3, 4, 1] to illustrate the operational steps of Cantor:
 
@@ -37,6 +37,7 @@ rank = rank + 1 * 1! = 9
 Since my lexicographical order starts at 1, and we're counting the number of permutations less than rank 3214, 
 	
 then rank 3214 is going to have to be added by 1
-	
-  
+
+Similar problem:
+https://leetcode.com/problems/permutation-sequence/
   
