@@ -40,4 +40,15 @@ then rank 3214 is going to have to be added by 1
 
 Similar problem:
 https://leetcode.com/problems/permutation-sequence/
+
+
+## 198.Permutation Index II(Cantor expansion)
+
+https://www.lintcode.com/problem/permutation-index-ii/description
+
+You need to divide by the factorial of the number of repeated elements, which is a bit of a high school permutation and combination problem. 
+
+Recording the number of repeated elements also needs dynamic update, the introduction of the hash table this versatile tool is more convenient.
+
+
   
