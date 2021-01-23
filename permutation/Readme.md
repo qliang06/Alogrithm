@@ -12,7 +12,7 @@ Output:6
 
 Solution：
 
-**Cantor expansion
+**Cantor expansion**
 
 Given a full permutation, calculate its lexicographic order. For the sake of clarity, we have an example [2, 3, 4, 1] to illustrate the operational steps of Cantor:
 
