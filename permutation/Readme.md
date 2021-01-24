@@ -50,5 +50,25 @@ You need to divide by the factorial of the number of repeated elements, which is
 
 Recording the number of repeated elements also needs dynamic update, the introduction of the hash table this versatile tool is more convenient.
 
+## 31.Next Permutation
+Example 1:
+
+Input: nums = [1,2,3]
+
+Output: [1,3,2]
+
+Example 2:
+
+Input: nums = [3,2,1]
+
+Output: [1,2,3]
+
+Example 3:
+
+Input: nums = [1,1,5]
+
+Output: [1,5,1]
+
+
 
   
