@@ -1,52 +1,36 @@
 public class NextPermutation {
 	
-	public void nextPermutation(int[] nums) {
-		int min= Integer.MAX_VALUE;
-        boolean flag= false;
-        for(int i= nums.length-1; i>0; i--)
-        {
-            if(nums[i]> nums[i-1])
-            {
-                int p= i-1;
-                int r= i;
-                for(int j= p+1; j<nums.length; j++)
-                {
-                    if(nums[j]>nums[p])
-                    {
-                        min= Math.min(nums[j]- nums[p], min);
-                        r= j;
-                    }    
-                }
-                int t= nums[p];
-                nums[p]= nums[r];
-                nums[r]= t;
-                
-                Arrays.sort(nums, p+1, nums.length);
-                flag= true;
-                return;
-            }
+public class Solution {
+    public void nextPermutation(int[] nums) {
+        int i = nums.length - 2;
+        while (i >= 0 && nums[i + 1] <= nums[i]) {
+            i--;
         }
-		/*
-        boolean flag= false;
-        for(int i= nums.length-1; i>0; i--)
-            for(int j= i-1; j>=0; j--)
-                if(nums[i]> nums[j])
-                {
-                    
-                     int t= nums[j];
-                     nums[j]= nums[i];
-                     nums[i]= t;
-                     Arrays.sort(nums, j+1, nums.length);
-                    
-                    flag= true;
-                    return;
-                }
-        */
-        
-        if(!flag)
-            Arrays.sort(nums);
-        
+        if (i >= 0) {
+            int j = nums.length - 1;
+            while (j >= 0 && nums[j] <= nums[i]) {
+                j--;
+            }
+            swap(nums, i, j);
+        }
+        reverse(nums, i + 1);
     }
+
+    private void reverse(int[] nums, int start) {
+        int i = start, j = nums.length - 1;
+        while (i < j) {
+            swap(nums, i, j);
+            i++;
+            j--;
+        }
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+}
 	
 	public static void main(String[] args) {
 
