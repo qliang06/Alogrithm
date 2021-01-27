@@ -58,6 +58,16 @@ Single Pass Approach
 2. search from i to the end of the nums to find the smallest number that bigger than nums[i-1] which is j;
 
 3. swap i-1 and j, and then sort the array from i to nums.length;
+=======================
+> 1.According to Wikipedia, a man named Narayana Pandita presented the following simple algorithm to solve this problem in the 14th century.
+
+> 2.Find the largest index k such that nums[k] < nums[k + 1]. If no such index exists, just reverse nums and done.
+
+> 3.Find the largest index l > k such that nums[k] < nums[l].
+
+> 4.Swap nums[k] and nums[l].
+
+> 5.Reverse the sub-array nums[k + 1:].
 
 
 
